@@ -1,0 +1,123 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("../assets/fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../assets/fonts/Roboto-Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../assets/fonts/Roboto-Thin.ttf") format("truetype");
+    font-weight: 100;
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+header .brand {
+    display: none;
+}
+
+#primary-nav {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 8px;
+}
+
+#primary-nav a {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    font-size: 15pt;    
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid white;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+}
+
+#primary-nav a.active {
+    border-color: black;
+}
+
+#primary-nav a:hover {
+    background-color: black;
+    color: white;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#title {
+    font-size: 40pt;
+    text-align: center;
+    border: 1px solid #fff;
+}
+
+#title span {
+    padding:  0 8px;
+    font-weight: bolder;
+}
+
+#title span:first-child {
+    color: #000;
+    background-color: #fff;
+}
+
+#title span:last-child {
+    color: #fff;
+    background-color: #000;
+}
+
+footer {
+    width: 100%;
+    min-height: 40px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 600px) {
+    header .brand {
+        display: block;
+    }
+
+    header .brand > img {
+        height: 40px;
+    }
+}
